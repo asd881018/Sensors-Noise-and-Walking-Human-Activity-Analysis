@@ -67,23 +67,102 @@ def read_slp_data():
     return slp_5min
 
 
+def read_mrp_upstairs_long_data():
+    mrp_upstairs_long = process_file('data\matt_upstairs_long.csv')
+    mrp_upstairs_long = mrp_upstairs_long[(
+        mrp_upstairs_long['seconds'] > 6) & (mrp_upstairs_long['seconds'] < 53)]
+    mrp_upstairs_long['seconds'] = mrp_upstairs_long['seconds'] - 6
+    return mrp_upstairs_long
+
+
+def read_mrp_downstairs_long_data():
+    mrp_downstairs_long = process_file('data\matt_upstairs_long.csv')
+    mrp_downstairs_long = mrp_downstairs_long[(
+        mrp_downstairs_long['seconds'] > 6) & (mrp_downstairs_long['seconds'] < 53)]
+    mrp_downstairs_long['seconds'] = mrp_downstairs_long['seconds'] - 6
+    return mrp_downstairs_long
+
+
+def read_mrp_upstairs_16steps_data():
+    mrp_upstairs_16steps = process_file('data\matt_upstairs_16stpes.csv')
+    mrp_upstairs_16steps = mrp_upstairs_16steps[(
+        mrp_upstairs_16steps['seconds'] > 8) & (mrp_upstairs_16steps['seconds'] < 20)]
+    mrp_upstairs_16steps['seconds'] = mrp_upstairs_16steps['seconds'] - 8
+    return mrp_upstairs_16steps
+
+
+def read_mrp_downstairs_16steps_data():
+    mrp_downstairs_16steps = process_file('data\matt_downstairs_16steps.csv')
+    mrp_downstairs_16steps = mrp_downstairs_16steps[(
+        mrp_downstairs_16steps['seconds'] > 10) & (mrp_downstairs_16steps['seconds'] < 20)]
+    mrp_downstairs_16steps['seconds'] = mrp_downstairs_16steps['seconds'] - 10
+    return mrp_downstairs_16steps
+
+
+def read_mrp_smallrun_data():
+    mrp_smallrun = process_file('data\matt_small_run2.csv')
+    mrp_smallrun = mrp_smallrun[(
+        mrp_smallrun['seconds'] > 5) & (mrp_smallrun['seconds'] < 45)]
+    mrp_smallrun['seconds'] = mrp_smallrun['seconds'] - 5
+    return mrp_smallrun
+
+
+def read_mrp_smallrun_2_data():
+    mrp_smallrun_2 = process_file('data\matt_small_run2.csv')
+    mrp_smallrun_2 = mrp_smallrun_2[(
+        mrp_smallrun_2['seconds'] > 5) & (mrp_smallrun_2['seconds'] < 45)]
+    mrp_smallrun_2['seconds'] = mrp_smallrun_2['seconds'] - 5
+    return mrp_smallrun_2
+
+
+def read_mrp_fastrun_data():
+    mrp_fastrun = process_file('data\matt_fast_run.csv')
+    mrp_fastrun = mrp_fastrun[(
+        mrp_fastrun['seconds'] > 3) & (mrp_fastrun['seconds'] < 25)]
+    mrp_fastrun['seconds'] = mrp_fastrun['seconds'] - 3
+    return mrp_fastrun
+
+
 def main():
 
+    # read 5 mins data
     dlp_5min = read_dlp_data()
     drp_5min = read_drp_data()
-
     mrp_5min = read_mrp_data()
-
     slp_5min = read_slp_data()
     srp_5min = read_srp_data()
 
+    # read human-activities data
+    mrp_upstairs_long = read_mrp_upstairs_long_data()
+    mrp_downstairs_long = read_mrp_downstairs_long_data()
+    mrp_upstairs_16steps = read_mrp_upstairs_16steps_data()
+    mrp_downstairs_16steps = read_mrp_downstairs_16steps_data()
+    mrp_smallrun = read_mrp_smallrun_data()
+    mrp_smallrun_2 = read_mrp_smallrun_2_data()
+    mrp_fastrun = read_mrp_fastrun_data()
+
+    # write out 5 mins data
     dlp_5min.to_csv('processed_data/dlp_5min.csv', index=False)
     drp_5min.to_csv('processed_data/drp_5min.csv', index=False)
-
     mrp_5min.to_csv('processed_data/mrp_5min.csv', index=False)
-
     slp_5min.to_csv('processed_data/slp_5min.csv', index=False)
     srp_5min.to_csv('processed_data/srp_5min.csv', index=False)
+
+    # write out human-activities data
+    mrp_upstairs_long.to_csv(
+        'processed_data/mrp_upstairs_long.csv', index=False)
+    mrp_downstairs_long.to_csv(
+        'processed_data/mrp_downstairs_long.csv', index=False)
+    mrp_upstairs_16steps.to_csv(
+        'processed_data/mrp_upstairs_16steps.csv', index=False)
+    mrp_downstairs_16steps.to_csv(
+        'processed_data/mrp_downstairs_16steps.csv', index=False)
+    mrp_smallrun.to_csv(
+        'processed_data/mrp_smallrun.csv', index=False)
+    mrp_smallrun_2.to_csv(
+        'processed_data/mrp_smallrun_2.csv', index=False)
+    mrp_fastrun.to_csv(
+        'processed_data/mrp_fastrun.csv', index=False)
 
 
 if __name__ == "__main__":
