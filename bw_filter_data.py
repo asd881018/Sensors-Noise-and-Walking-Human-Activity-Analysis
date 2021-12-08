@@ -44,6 +44,18 @@ def main():
     mrp_1min_screenon = process_file('data/matt_rp50_1min_screenon.csv')
     mrp_1min_screenoff = process_file('data/matt_rp50_1min_screenoff.csv')
 
+    m_up24_1 = process_file('processed_data\m_up24_1.csv')
+    m_up24_2 = process_file('processed_data\m_up24_2.csv')
+    m_up24_3 = process_file('processed_data\m_up24_3.csv')
+    m_up24_4 = process_file('processed_data\m_up24_4.csv')
+    m_up24_5 = process_file('processed_data\m_up24_5.csv')
+
+    m_down24_1 = process_file('processed_data\m_down24_1.csv')
+    m_down24_2 = process_file('processed_data\m_down24_2.csv')
+    m_down24_3 = process_file('processed_data\m_down24_3.csv')
+    m_down24_4 = process_file('processed_data\m_down24_4.csv')
+    m_down24_5 = process_file('processed_data\m_down24_5.csv')
+
     # use butterworth() to filter the data
     dlp_5min_bw = butterworth(dlp_5min)
     drp_5min_bw = butterworth(drp_5min)
@@ -52,6 +64,19 @@ def main():
     mrp_1min_screenoff_bw = butterworth(mrp_1min_screenoff)
     slp_5min_bw = butterworth(slp_5min)
     srp_5min_bw = butterworth(srp_5min)
+
+    # use butterworth() to filter the activity data
+    m_up24_1_bw = butterworth(m_up24_1)
+    m_up24_2_bw = butterworth(m_up24_2)
+    m_up24_3_bw = butterworth(m_up24_3)
+    m_up24_4_bw = butterworth(m_up24_4)
+    m_up24_5_bw = butterworth(m_up24_5)
+
+    m_down24_1_bw = butterworth(m_down24_1)
+    m_down24_2_bw = butterworth(m_down24_2)
+    m_down24_3_bw = butterworth(m_down24_3)
+    m_down24_4_bw = butterworth(m_down24_4)
+    m_down24_5_bw = butterworth(m_down24_5)
 
     # write out the filtered data
     dlp_5min_bw.to_csv('processed_data/dlp_5min_bw.csv', index=False)
@@ -65,6 +90,18 @@ def main():
 
     slp_5min_bw.to_csv('processed_data/slp_5min_bw.csv', index=False)
     srp_5min_bw.to_csv('processed_data/srp_5min_bw.csv', index=False)
+
+    m_up24_1_bw.to_csv('processed_data/m_up24_1_bw.csv', index=False)
+    m_up24_2_bw.to_csv('processed_data/m_up24_2_bw.csv', index=False)
+    m_up24_3_bw.to_csv('processed_data/m_up24_3_bw.csv', index=False)
+    m_up24_4_bw.to_csv('processed_data/m_up24_4_bw.csv', index=False)
+    m_up24_5_bw.to_csv('processed_data/m_up24_5_bw.csv', index=False)
+
+    m_down24_1_bw.to_csv('processed_data/m_down24_1_bw.csv', index=False)
+    m_down24_2_bw.to_csv('processed_data/m_down24_2_bw.csv', index=False)
+    m_down24_3_bw.to_csv('processed_data/m_down24_3_bw.csv', index=False)
+    m_down24_4_bw.to_csv('processed_data/m_down24_4_bw.csv', index=False)
+    m_down24_5_bw.to_csv('processed_data/m_down24_5_bw.csv', index=False)
 
 
 if __name__ == "__main__":
