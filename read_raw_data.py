@@ -123,6 +123,86 @@ def read_mrp_fastrun_data():
     return mrp_fastrun
 
 
+def read_m_up24_1_data():
+    m_up24_1 = process_file('data\matt_upstairs_24steps_1.csv')
+    m_up24_1 = m_up24_1[(m_up24_1['seconds'] > 6.5) & (
+        m_up24_1['seconds'] < 22)]
+    m_up24_1['seconds'] = m_up24_1['seconds'] - 6.5
+    return m_up24_1
+
+
+def read_m_up24_2_data():
+    m_up24_2 = process_file('data\matt_upstairs_24steps_2.csv')
+    m_up24_2 = m_up24_2[(m_up24_2['seconds'] > 5) & (
+        m_up24_2['seconds'] < 20.5)]
+    m_up24_2['seconds'] = m_up24_2['seconds'] - 5
+    return m_up24_2
+
+
+def read_m_up24_3_data():
+    m_up24_3 = process_file('data\matt_upstairs_24steps_3.csv')
+    m_up24_3 = m_up24_3[(m_up24_3['seconds'] > 4) & (
+        m_up24_3['seconds'] < 20.5)]
+    m_up24_3['seconds'] = m_up24_3['seconds'] - 4
+    return m_up24_3
+
+
+def read_m_up24_4_data():
+    m_up24_4 = process_file('data\matt_upstairs_24steps_4.csv')
+    m_up24_4 = m_up24_4[(m_up24_4['seconds'] > 4) & (
+        m_up24_4['seconds'] < 19.5)]
+    m_up24_4['seconds'] = m_up24_4['seconds'] - 4
+    return m_up24_4
+
+
+def read_m_up24_5_data():
+    m_up24_5 = process_file('data\matt_upstairs_24steps_5.csv')
+    m_up24_5 = m_up24_5[(m_up24_5['seconds'] > 5) & (
+        m_up24_5['seconds'] < 19.5)]
+    m_up24_5['seconds'] = m_up24_5['seconds'] - 5
+    return m_up24_5
+
+
+def read_m_down24_1_data():
+    m_down24_1 = process_file('data\matt_downstairs_24steps_1.csv')
+    m_down24_1 = m_down24_1[(m_down24_1['seconds'] > 7) & (
+        m_down24_1['seconds'] < 21.5)]
+    m_down24_1['seconds'] = m_down24_1['seconds'] - 7
+    return m_down24_1
+
+
+def read_m_down24_2_data():
+    m_down24_2 = process_file('data\matt_downstairs_24steps_2.csv')
+    m_down24_2 = m_down24_2[(m_down24_2['seconds'] > 5.5) & (
+        m_down24_2['seconds'] < 20)]
+    m_down24_2['seconds'] = m_down24_2['seconds'] - 5.5
+    return m_down24_2
+
+
+def read_m_down24_3_data():
+    m_down24_3 = process_file('data\matt_downstairs_24steps_3.csv')
+    m_down24_3 = m_down24_3[(m_down24_3['seconds'] > 5) & (
+        m_down24_3['seconds'] < 19)]
+    m_down24_3['seconds'] = m_down24_3['seconds'] - 5
+    return m_down24_3
+
+
+def read_m_down24_4_data():
+    m_down24_4 = process_file('data\matt_downstairs_24steps_4.csv')
+    m_down24_4 = m_down24_4[(m_down24_4['seconds'] > 5) & (
+        m_down24_4['seconds'] < 19)]
+    m_down24_4['seconds'] = m_down24_4['seconds'] - 5
+    return m_down24_4
+
+
+def read_m_down24_5_data():
+    m_down24_5 = process_file('data\matt_downstairs_24steps_5.csv')
+    m_down24_5 = m_down24_5[(m_down24_5['seconds'] > 5) & (
+        m_down24_5['seconds'] < 19)]
+    m_down24_5['seconds'] = m_down24_5['seconds'] - 5
+    return m_down24_5
+
+
 def main():
 
     # read 5 mins data
@@ -140,6 +220,18 @@ def main():
     mrp_smallrun = read_mrp_smallrun_data()
     mrp_smallrun_2 = read_mrp_smallrun_2_data()
     mrp_fastrun = read_mrp_fastrun_data()
+
+    m_up24_1 = read_m_up24_1_data()
+    m_up24_2 = read_m_up24_2_data()
+    m_up24_3 = read_m_up24_3_data()
+    m_up24_4 = read_m_up24_4_data()
+    m_up24_5 = read_m_up24_5_data()
+
+    m_down24_1 = read_m_down24_1_data()
+    m_down24_2 = read_m_down24_2_data()
+    m_down24_3 = read_m_down24_3_data()
+    m_down24_4 = read_m_down24_4_data()
+    m_down24_5 = read_m_down24_5_data()
 
     # write out 5 mins data
     dlp_5min.to_csv('processed_data/dlp_5min.csv', index=False)
@@ -163,6 +255,28 @@ def main():
         'processed_data/mrp_smallrun_2.csv', index=False)
     mrp_fastrun.to_csv(
         'processed_data/mrp_fastrun.csv', index=False)
+
+    m_up24_1.to_csv(
+        'processed_data/m_up24_1.csv', index=False)
+    m_up24_2.to_csv(
+        'processed_data/m_up24_2.csv', index=False)
+    m_up24_3.to_csv(
+        'processed_data/m_up24_3.csv', index=False)
+    m_up24_4.to_csv(
+        'processed_data/m_up24_4.csv', index=False)
+    m_up24_5.to_csv(
+        'processed_data/m_up24_5.csv', index=False)
+
+    m_down24_1.to_csv(
+        'processed_data/m_down24_1.csv', index=False)
+    m_down24_2.to_csv(
+        'processed_data/m_down24_2.csv', index=False)
+    m_down24_3.to_csv(
+        'processed_data/m_down24_3.csv', index=False)
+    m_down24_4.to_csv(
+        'processed_data/m_down24_4.csv', index=False)
+    m_down24_5.to_csv(
+        'processed_data/m_down24_5.csv', index=False)
 
 
 if __name__ == "__main__":
