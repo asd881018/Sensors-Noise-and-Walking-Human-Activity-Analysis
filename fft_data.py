@@ -50,6 +50,8 @@ def main():
     slp_5min_bw = process_file('processed_data/slp_5min_bw.csv')
     srp_5min_bw = process_file('processed_data/srp_5min_bw.csv')
 
+    d_run_bw = process_file('processed_data/d_run_4min_bw.csv')
+
     # using fourier transform for trimed raw data
     dlp_5min_fft = fourier(dlp_5min)
     drp_5min_fft = fourier(drp_5min)
@@ -71,6 +73,8 @@ def main():
 
     slp_5min_bw_fft = fourier(slp_5min_bw)
     srp_5min_bw_fft = fourier(srp_5min_bw)
+
+    d_run_bw_fft = fourier(d_run_bw)
 
     # write out fourier transform for trimed raw data
     dlp_5min_fft.to_csv('processed_data/dlp_5min_fft.csv', index=False)
@@ -97,6 +101,8 @@ def main():
 
     slp_5min_bw_fft.to_csv('processed_data/slp_5min_bw_fft.csv', index=False)
     srp_5min_bw_fft.to_csv('processed_data/srp_5min_bw_fft.csv', index=False)
+
+    d_run_bw_fft.to_csv('processed_data/d_run_4min_bw_fft.csv')
 
 
 if __name__ == "__main__":

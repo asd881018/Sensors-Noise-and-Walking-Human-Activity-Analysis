@@ -56,6 +56,18 @@ def main():
     m_down24_4 = process_file('processed_data\m_down24_4.csv')
     m_down24_5 = process_file('processed_data\m_down24_5.csv')
 
+    d_up_1 = process_file('processed_data\d_up_1.csv')
+    d_up_2 = process_file('processed_data\d_up_2.csv')
+    d_up_3 = process_file('processed_data\d_up_3.csv')
+    d_up_4 = process_file('processed_data\d_up_4.csv')
+
+    d_down_1 = process_file('processed_data\d_down_1.csv')
+    d_down_2 = process_file('processed_data\d_down_2.csv')
+    d_down_3 = process_file('processed_data\d_down_3.csv')
+    d_down_4 = process_file('processed_data\d_down_4.csv')
+
+    d_run = process_file('processed_data\d_run_4min.csv')
+
     # use butterworth() to filter the data
     dlp_5min_bw = butterworth(dlp_5min)
     drp_5min_bw = butterworth(drp_5min)
@@ -77,6 +89,18 @@ def main():
     m_down24_3_bw = butterworth(m_down24_3)
     m_down24_4_bw = butterworth(m_down24_4)
     m_down24_5_bw = butterworth(m_down24_5)
+
+    d_up_1_bw = butterworth(d_up_1)
+    d_up_2_bw = butterworth(d_up_2)
+    d_up_3_bw = butterworth(d_up_3)
+    d_up_4_bw = butterworth(d_up_4)
+
+    d_down_1_bw = butterworth(d_down_1)
+    d_down_2_bw = butterworth(d_down_2)
+    d_down_3_bw = butterworth(d_down_3)
+    d_down_4_bw = butterworth(d_down_4)
+
+    d_run_bw = butterworth(d_run)
 
     # write out the filtered data
     dlp_5min_bw.to_csv('processed_data/dlp_5min_bw.csv', index=False)
@@ -102,6 +126,18 @@ def main():
     m_down24_3_bw.to_csv('processed_data/m_down24_3_bw.csv', index=False)
     m_down24_4_bw.to_csv('processed_data/m_down24_4_bw.csv', index=False)
     m_down24_5_bw.to_csv('processed_data/m_down24_5_bw.csv', index=False)
+
+    d_up_1_bw.to_csv('processed_data/d_up_1_bw.csv', index=False)
+    d_up_2_bw.to_csv('processed_data/d_up_2_bw.csv', index=False)
+    d_up_3_bw.to_csv('processed_data/d_up_3_bw.csv', index=False)
+    d_up_4_bw.to_csv('processed_data/d_up_4_bw.csv', index=False)
+
+    d_down_1_bw.to_csv('processed_data/d_down_1_bw.csv', index=False)
+    d_down_2_bw.to_csv('processed_data/d_down_2_bw.csv', index=False)
+    d_down_3_bw.to_csv('processed_data/d_down_3_bw.csv', index=False)
+    d_down_4_bw.to_csv('processed_data/d_down_4_bw.csv', index=False)
+
+    d_run_bw.to_csv('processed_data/d_run_4min_bw.csv', index=False)
 
 
 if __name__ == "__main__":
