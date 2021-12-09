@@ -66,7 +66,7 @@ def read_slp_data():
 
 
 def read_mrp_upstairs_long_data():
-    mrp_upstairs_long = process_file('data\matt_upstairs_long.csv')
+    mrp_upstairs_long = process_file('data/matt_upstairs_long.csv')
     mrp_upstairs_long = mrp_upstairs_long[(
         mrp_upstairs_long['seconds'] > 6) & (mrp_upstairs_long['seconds'] < 53)]
     mrp_upstairs_long['seconds'] = mrp_upstairs_long['seconds'] - 6
@@ -74,7 +74,7 @@ def read_mrp_upstairs_long_data():
 
 
 def read_mrp_downstairs_long_data():
-    mrp_downstairs_long = process_file('data\matt_upstairs_long.csv')
+    mrp_downstairs_long = process_file('data/matt_upstairs_long.csv')
     mrp_downstairs_long = mrp_downstairs_long[(
         mrp_downstairs_long['seconds'] > 6) & (mrp_downstairs_long['seconds'] < 53)]
     mrp_downstairs_long['seconds'] = mrp_downstairs_long['seconds'] - 6
@@ -82,7 +82,7 @@ def read_mrp_downstairs_long_data():
 
 
 def read_mrp_upstairs_16steps_data():
-    mrp_upstairs_16steps = process_file('data\matt_upstairs_16stpes.csv')
+    mrp_upstairs_16steps = process_file('data/matt_upstairs_16stpes.csv')
     mrp_upstairs_16steps = mrp_upstairs_16steps[(
         mrp_upstairs_16steps['seconds'] > 8) & (mrp_upstairs_16steps['seconds'] < 20)]
     mrp_upstairs_16steps['seconds'] = mrp_upstairs_16steps['seconds'] - 8
@@ -90,7 +90,7 @@ def read_mrp_upstairs_16steps_data():
 
 
 def read_mrp_downstairs_16steps_data():
-    mrp_downstairs_16steps = process_file('data\matt_downstairs_16steps.csv')
+    mrp_downstairs_16steps = process_file('data/matt_downstairs_16steps.csv')
     mrp_downstairs_16steps = mrp_downstairs_16steps[(
         mrp_downstairs_16steps['seconds'] > 10) & (mrp_downstairs_16steps['seconds'] < 20)]
     mrp_downstairs_16steps['seconds'] = mrp_downstairs_16steps['seconds'] - 10
@@ -98,7 +98,7 @@ def read_mrp_downstairs_16steps_data():
 
 
 def read_mrp_smallrun_data():
-    mrp_smallrun = process_file('data\matt_small_run2.csv')
+    mrp_smallrun = process_file('data/matt_small_run2.csv')
     mrp_smallrun = mrp_smallrun[(
         mrp_smallrun['seconds'] > 5) & (mrp_smallrun['seconds'] < 45)]
     mrp_smallrun['seconds'] = mrp_smallrun['seconds'] - 5
@@ -106,7 +106,7 @@ def read_mrp_smallrun_data():
 
 
 def read_mrp_smallrun_2_data():
-    mrp_smallrun_2 = process_file('data\matt_small_run2.csv')
+    mrp_smallrun_2 = process_file('data/matt_small_run2.csv')
     mrp_smallrun_2 = mrp_smallrun_2[(
         mrp_smallrun_2['seconds'] > 5) & (mrp_smallrun_2['seconds'] < 45)]
     mrp_smallrun_2['seconds'] = mrp_smallrun_2['seconds'] - 5
@@ -114,7 +114,7 @@ def read_mrp_smallrun_2_data():
 
 
 def read_mrp_fastrun_data():
-    mrp_fastrun = process_file('data\matt_fast_run.csv')
+    mrp_fastrun = process_file('data/matt_fast_run.csv')
     mrp_fastrun = mrp_fastrun[(
         mrp_fastrun['seconds'] > 3) & (mrp_fastrun['seconds'] < 25)]
     mrp_fastrun['seconds'] = mrp_fastrun['seconds'] - 3
@@ -122,7 +122,7 @@ def read_mrp_fastrun_data():
 
 
 def read_m_up24_1_data():
-    m_up24_1 = process_file('data\matt_upstairs_24steps_1.csv')
+    m_up24_1 = process_file('data/matt_upstairs_24steps_1.csv')
     m_up24_1 = m_up24_1[(m_up24_1['seconds'] > 6.5) & (
         m_up24_1['seconds'] < 22)]
     m_up24_1['seconds'] = m_up24_1['seconds'] - 6.5
@@ -130,7 +130,7 @@ def read_m_up24_1_data():
 
 
 def read_m_up24_2_data():
-    m_up24_2 = process_file('data\matt_upstairs_24steps_2.csv')
+    m_up24_2 = process_file('data/matt_upstairs_24steps_2.csv')
     m_up24_2 = m_up24_2[(m_up24_2['seconds'] > 5) & (
         m_up24_2['seconds'] < 20.5)]
     m_up24_2['seconds'] = m_up24_2['seconds'] - 5
@@ -138,7 +138,7 @@ def read_m_up24_2_data():
 
 
 def read_m_up24_3_data():
-    m_up24_3 = process_file('data\matt_upstairs_24steps_3.csv')
+    m_up24_3 = process_file('data/matt_upstairs_24steps_3.csv')
     m_up24_3 = m_up24_3[(m_up24_3['seconds'] > 4) & (
         m_up24_3['seconds'] < 20.5)]
     m_up24_3['seconds'] = m_up24_3['seconds'] - 4
@@ -146,7 +146,7 @@ def read_m_up24_3_data():
 
 
 def read_m_up24_4_data():
-    m_up24_4 = process_file('data\matt_upstairs_24steps_4.csv')
+    m_up24_4 = process_file('data/matt_upstairs_24steps_4.csv')
     m_up24_4 = m_up24_4[(m_up24_4['seconds'] > 4) & (
         m_up24_4['seconds'] < 19.5)]
     m_up24_4['seconds'] = m_up24_4['seconds'] - 4
@@ -154,7 +154,7 @@ def read_m_up24_4_data():
 
 
 def read_m_up24_5_data():
-    m_up24_5 = process_file('data\matt_upstairs_24steps_5.csv')
+    m_up24_5 = process_file('data/matt_upstairs_24steps_5.csv')
     m_up24_5 = m_up24_5[(m_up24_5['seconds'] > 5) & (
         m_up24_5['seconds'] < 19.5)]
     m_up24_5['seconds'] = m_up24_5['seconds'] - 5
@@ -162,7 +162,7 @@ def read_m_up24_5_data():
 
 
 def read_m_down24_1_data():
-    m_down24_1 = process_file('data\matt_downstairs_24steps_1.csv')
+    m_down24_1 = process_file('data/matt_downstairs_24steps_1.csv')
     m_down24_1 = m_down24_1[(m_down24_1['seconds'] > 7) & (
         m_down24_1['seconds'] < 21.5)]
     m_down24_1['seconds'] = m_down24_1['seconds'] - 7
@@ -170,7 +170,7 @@ def read_m_down24_1_data():
 
 
 def read_m_down24_2_data():
-    m_down24_2 = process_file('data\matt_downstairs_24steps_2.csv')
+    m_down24_2 = process_file('data/matt_downstairs_24steps_2.csv')
     m_down24_2 = m_down24_2[(m_down24_2['seconds'] > 5.5) & (
         m_down24_2['seconds'] < 20)]
     m_down24_2['seconds'] = m_down24_2['seconds'] - 5.5
@@ -178,7 +178,7 @@ def read_m_down24_2_data():
 
 
 def read_m_down24_3_data():
-    m_down24_3 = process_file('data\matt_downstairs_24steps_3.csv')
+    m_down24_3 = process_file('data/matt_downstairs_24steps_3.csv')
     m_down24_3 = m_down24_3[(m_down24_3['seconds'] > 5) & (
         m_down24_3['seconds'] < 19)]
     m_down24_3['seconds'] = m_down24_3['seconds'] - 5
@@ -186,7 +186,7 @@ def read_m_down24_3_data():
 
 
 def read_m_down24_4_data():
-    m_down24_4 = process_file('data\matt_downstairs_24steps_4.csv')
+    m_down24_4 = process_file('data/matt_downstairs_24steps_4.csv')
     m_down24_4 = m_down24_4[(m_down24_4['seconds'] > 5) & (
         m_down24_4['seconds'] < 19)]
     m_down24_4['seconds'] = m_down24_4['seconds'] - 5
@@ -194,7 +194,7 @@ def read_m_down24_4_data():
 
 
 def read_m_down24_5_data():
-    m_down24_5 = process_file('data\matt_downstairs_24steps_5.csv')
+    m_down24_5 = process_file('data/matt_downstairs_24steps_5.csv')
     m_down24_5 = m_down24_5[(m_down24_5['seconds'] > 5) & (
         m_down24_5['seconds'] < 19)]
     m_down24_5['seconds'] = m_down24_5['seconds'] - 5
@@ -418,6 +418,28 @@ def main():
     dlp_downstairs_1.to_csv('processed_data/dlp_downstairs_1.csv', index=False)
     dlp_downstairs_2.to_csv('processed_data/dlp_downstairs_2.csv', index=False)
 
+    s_up_1 = process_file('data/s_up_0.csv').to_csv('processed_data/srp_up_1.csv', index=False)
+    s_up_2 = process_file('data/s_up_1.csv').to_csv('processed_data/srp_up_2.csv', index=False)
+    s_up_3 = process_file('data/s_up_2.csv').to_csv('processed_data/srp_up_3.csv', index=False)
+    s_up_4 = process_file('data/s_up_3.csv').to_csv('processed_data/srp_up_4.csv', index=False)
+    s_up_5 = process_file('data/s_up_4.csv').to_csv('processed_data/srp_up_5.csv', index=False)
+    s_up_6 = process_file('data/s_up_5.csv').to_csv('processed_data/srp_up_6.csv', index=False)
+    s_up_7 = process_file('data/s_up_6.csv').to_csv('processed_data/srp_up_7.csv', index=False)
+    s_up_8 = process_file('data/s_up_7.csv').to_csv('processed_data/srp_up_8.csv', index=False)
+    s_up_9 = process_file('data/s_up_8.csv').to_csv('processed_data/srp_up_9.csv', index=False)
+    s_up_10 = process_file('data/s_up_9.csv').to_csv('processed_data/srp_up_10.csv', index=False)
 
+    s_down_1 = process_file('data/s_down_0.csv').to_csv('processed_data/srp_down_1.csv', index=False)
+    s_down_2 = process_file('data/s_down_1.csv').to_csv('processed_data/srp_down_2.csv', index=False)
+    s_down_3 = process_file('data/s_down_2.csv').to_csv('processed_data/srp_down_3.csv', index=False)
+    s_down_4 = process_file('data/s_down_3.csv').to_csv('processed_data/srp_down_4.csv', index=False)
+    s_down_5 = process_file('data/s_down_4.csv').to_csv('processed_data/srp_down_5.csv', index=False)
+    s_down_6 = process_file('data/s_down_5.csv').to_csv('processed_data/srp_down_6.csv', index=False)
+    s_down_7 = process_file('data/s_down_6.csv').to_csv('processed_data/srp_down_7.csv', index=False)
+    s_down_8 = process_file('data/s_down_7.csv').to_csv('processed_data/srp_down_8.csv', index=False)
+    s_down_9 = process_file('data/s_down_8.csv').to_csv('processed_data/srp_down_9.csv', index=False)
+    s_down_10 = process_file('data/s_down_9.csv').to_csv('processed_data/srp_down_10.csv', index=False)
+
+    
 if __name__ == "__main__":
     main()
