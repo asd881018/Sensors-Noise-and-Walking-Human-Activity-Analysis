@@ -20,7 +20,7 @@ def process_file(pathname):
 
 def fourier(df):
     yf = np.abs(fft(df['x'] + df['y'] + df['z']))
-    xf = np.linspace(0, df.shape[0] / 60, len(yf))
+    xf = np.linspace(0, 50, len(yf))
 
     return pd.DataFrame(zip(xf, yf), columns=['x', 'y'])
 
