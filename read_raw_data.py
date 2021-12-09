@@ -200,12 +200,14 @@ def read_m_down24_5_data():
     m_down24_5['seconds'] = m_down24_5['seconds'] - 5
     return m_down24_5
 
+
 def read_d_run_data():
     d_run_4min = process_file('data/drun4min.csv')
-    d_run_4min = d_run_4min[(d_run_4min['seconds'] > 20) & 
-        (d_run_4min['seconds'] < 230)]
+    d_run_4min = d_run_4min[(d_run_4min['seconds'] > 20) &
+                            (d_run_4min['seconds'] < 230)]
     d_run_4min['seconds'] = d_run_4min['seconds'] - 20
-    return d_run_4min    
+    return d_run_4min
+
 
 def read_d_up_1_data():
     d_up_1 = process_file('data/d_up1.csv')
@@ -213,11 +215,13 @@ def read_d_up_1_data():
     d_up_1['seconds'] = d_up_1['seconds'] - 12
     return d_up_1
 
+
 def read_d_up_2_data():
     d_up_2 = process_file('data/d_up2.csv')
     d_up_2 = d_up_2[(d_up_2['seconds'] > 11) & (d_up_2['seconds'] < 23)]
     d_up_2['seconds'] = d_up_2['seconds'] - 11
     return d_up_2
+
 
 def read_d_up_3_data():
     d_up_3 = process_file('data/d_up3.csv')
@@ -225,23 +229,29 @@ def read_d_up_3_data():
     d_up_3['seconds'] = d_up_3['seconds'] - 13
     return d_up_3
 
+
 def read_d_up_4_data():
     d_up_4 = process_file('data/d_up4.csv')
     d_up_4 = d_up_4[(d_up_4['seconds'] > 12) & (d_up_4['seconds'] < 23)]
     d_up_4['seconds'] = d_up_4['seconds'] - 12
     return d_up_4
 
+
 def read_d_down_1_data():
     d_down_1 = process_file('data/d_down1.csv')
-    d_down_1 = d_down_1[(d_down_1['seconds'] > 15) & (d_down_1['seconds'] < 27)]
+    d_down_1 = d_down_1[(d_down_1['seconds'] > 15) &
+                        (d_down_1['seconds'] < 27)]
     d_down_1['seconds'] = d_down_1['seconds'] - 15
     return d_down_1
 
+
 def read_d_down_2_data():
     d_down_2 = process_file('data/d_down2.csv')
-    d_down_2 = d_down_2[(d_down_2['seconds'] > 12) & (d_down_2['seconds'] < 24)]
+    d_down_2 = d_down_2[(d_down_2['seconds'] > 12) &
+                        (d_down_2['seconds'] < 24)]
     d_down_2['seconds'] = d_down_2['seconds'] - 12
     return d_down_2
+
 
 def read_d_down_3_data():
     d_down_3 = process_file('data/d_down3.csv')
@@ -249,11 +259,46 @@ def read_d_down_3_data():
     d_down_3['seconds'] = d_down_3['seconds'] - 8
     return d_down_3
 
+
 def read_d_down_4_data():
     d_down_4 = process_file('data/d_down4.csv')
-    d_down_4 = d_down_4[(d_down_4['seconds'] > 11) & (d_down_4['seconds'] < 22)]
+    d_down_4 = d_down_4[(d_down_4['seconds'] > 11) &
+                        (d_down_4['seconds'] < 22)]
     d_down_4['seconds'] = d_down_4['seconds'] - 11
     return d_down_4
+
+
+def read_dlp_upstairs_1_data():
+    dlp_upstairs_1 = process_file('data/dstepup1.csv')
+    dlp_upstairs_1 = dlp_upstairs_1[dlp_upstairs_1['seconds'] > 12]
+    dlp_upstairs_1 = dlp_upstairs_1[dlp_upstairs_1['seconds'] < 21]
+    dlp_upstairs_1['seconds'] = dlp_upstairs_1['seconds'] - 12
+    return dlp_upstairs_1
+
+
+def read_dlp_upstairs_2_data():
+    dlp_upstairs_2 = process_file('data/dstepup1.csv')
+    dlp_upstairs_2 = dlp_upstairs_2[dlp_upstairs_2['seconds'] > 12]
+    dlp_upstairs_2 = dlp_upstairs_2[dlp_upstairs_2['seconds'] < 21]
+    dlp_upstairs_2['seconds'] = dlp_upstairs_2['seconds'] - 12
+    return dlp_upstairs_2
+
+
+def read_dlp_downstairs_1_data():
+    dlp_downstairs_1 = process_file('data/dstepdown1.csv')
+    dlp_downstairs_1 = dlp_downstairs_1[dlp_downstairs_1['seconds'] > 12]
+    dlp_downstairs_1 = dlp_downstairs_1[dlp_downstairs_1['seconds'] < 21]
+    dlp_downstairs_1['seconds'] = dlp_downstairs_1['seconds'] - 12
+    return dlp_downstairs_1
+
+
+def read_dlp_downstairs_2_data():
+    dlp_downstairs_2 = process_file('data/dstepdown2.csv')
+    dlp_downstairs_2 = dlp_downstairs_2[dlp_downstairs_2['seconds'] > 15.5]
+    dlp_downstairs_2 = dlp_downstairs_2[dlp_downstairs_2['seconds'] < 23]
+    dlp_downstairs_2['seconds'] = dlp_downstairs_2['seconds'] - 15.5
+    return dlp_downstairs_2
+
 
 def main():
 
@@ -296,6 +341,11 @@ def main():
     d_down_2 = read_d_down_2_data()
     d_down_3 = read_d_down_3_data()
     d_down_4 = read_d_down_4_data()
+
+    dlp_upstairs_1 = read_dlp_upstairs_1_data()
+    dlp_upstairs_2 = read_dlp_upstairs_2_data()
+    dlp_downstairs_1 = read_dlp_downstairs_1_data()
+    dlp_downstairs_2 = read_dlp_downstairs_2_data()
 
     # write out 5 mins data
     dlp_5min.to_csv('processed_data/dlp_5min.csv', index=False)
@@ -344,7 +394,7 @@ def main():
 
     d_run_4min.to_csv(
         'processed_data/d_run_4min.csv', index=False)
-    
+
     d_up_1.to_csv(
         'processed_data/d_up_1.csv', index=False)
     d_up_2.to_csv(
@@ -362,6 +412,11 @@ def main():
         'processed_data/d_down_3.csv', index=False)
     d_down_4.to_csv(
         'processed_data/d_down_4.csv', index=False)
+
+    dlp_upstairs_1.to_csv('processed_data/dlp_upstairs_1.csv', index=False)
+    dlp_upstairs_2.to_csv('processed_data/dlp_upstairs_2.csv', index=False)
+    dlp_downstairs_1.to_csv('processed_data/dlp_downstairs_1.csv', index=False)
+    dlp_downstairs_2.to_csv('processed_data/dlp_downstairs_2.csv', index=False)
 
 
 if __name__ == "__main__":

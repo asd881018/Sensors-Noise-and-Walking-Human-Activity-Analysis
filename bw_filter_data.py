@@ -66,6 +66,11 @@ def main():
     d_down_3 = process_file('processed_data\d_down_3.csv')
     d_down_4 = process_file('processed_data\d_down_4.csv')
 
+    dlp_upstairs_1 = process_file('processed_data/dlp_upstairs_1.csv')
+    dlp_upstairs_2 = process_file('processed_data/dlp_upstairs_2.csv')
+    dlp_downstairs_1 = process_file('processed_data/dlp_downstairs_1.csv')
+    dlp_downstairs_2 = process_file('processed_data/dlp_downstairs_2.csv')
+
     d_run = process_file('processed_data\d_run_4min.csv')
 
     # use butterworth() to filter the data
@@ -99,6 +104,11 @@ def main():
     d_down_2_bw = butterworth(d_down_2)
     d_down_3_bw = butterworth(d_down_3)
     d_down_4_bw = butterworth(d_down_4)
+
+    dlp_upstairs_1_bw = butterworth(dlp_upstairs_1)
+    dlp_upstairs_2_bw = butterworth(dlp_upstairs_2)
+    dlp_downstairs_1_bw = butterworth(dlp_downstairs_1)
+    dlp_downstairs_2_bw = butterworth(dlp_downstairs_2)
 
     d_run_bw = butterworth(d_run)
 
@@ -136,6 +146,15 @@ def main():
     d_down_2_bw.to_csv('processed_data/d_down_2_bw.csv', index=False)
     d_down_3_bw.to_csv('processed_data/d_down_3_bw.csv', index=False)
     d_down_4_bw.to_csv('processed_data/d_down_4_bw.csv', index=False)
+
+    dlp_upstairs_1_bw.to_csv(
+        'processed_data/dlp_upstairs_1_bw.csv', index=False)
+    dlp_upstairs_2_bw.to_csv(
+        'processed_data/dlp_upstairs_2_bw.csv', index=False)
+    dlp_downstairs_1_bw.to_csv(
+        'processed_data/dlp_downstairs_1_bw.csv', index=False)
+    dlp_downstairs_2_bw.to_csv(
+        'processed_data/dlp_downstairs_2_bw.csv', index=False)
 
     d_run_bw.to_csv('processed_data/d_run_4min_bw.csv', index=False)
 
