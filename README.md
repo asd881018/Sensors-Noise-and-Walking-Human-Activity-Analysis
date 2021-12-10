@@ -5,12 +5,12 @@
 This project explores human activity prediction by using Data Science and Machine Learning tools to analyze and predict a person’s current activity. We use our smartphones to record simple human movements, such as walking, running, and climbing stairs, and build a Machine Learning model that accurately predicts these activities. This project is inspired by Guillaume Chevalier’s LSTM Human Activity Recognition Project (https://github.com/guillaume-chevalier/LSTM-Human-Activity-Recognition).
 
 ## Python version and libraries
-We use python version 3.7.0
-Library installed: pandas, numpy, matplotlib, scipy, sklearn
+- We use python version 3.7.0
+- Library installed: pandas, numpy, matplotlib, scipy, sklearn
 
 ## Main topic
-Data gathering and cleaning
-Machine Learning
+- Data gathering and cleaning
+- Machine Learning
 
 ## Files
 1. `src.ipynb`
