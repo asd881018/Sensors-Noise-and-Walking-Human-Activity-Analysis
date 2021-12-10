@@ -13,7 +13,7 @@ Data gathering and cleaning
 Machine Learning
 
 ##Files
-1. src.ipynb
+1. `src.ipynb`
   - include all the library, functions
   - Small demostration of the implements
       - Screen on/off test
@@ -21,22 +21,22 @@ Machine Learning
       - Fourier Transform
 (Note: machine learning implement is in `machinelearning.ipynb`)
 
-2. read_raw_data.py
+2. `read_raw_data.py`
   - read the raw data
   - trim the useless data
   - write out new CSV file to processed_data folder
  
-3. bw_filter_data
+3. `bw_filter_data`
   - read raw or trimmed data
   - use Butterworth filter to filter the noise the out
   - write out new CSV file with tag( _bw ) to processed_data folder
 
-4. fft_data
+4. `fft_data`
   - read raw or trimmed data or filtered data
   - use Fast Fourier Transform to transform the sigal to frequency
   - write out new CSV file with tag( _fft ) to processed_data folder
 
-5. machinelearning.ipynb
+5. `machinelearning.ipynb`
   - read 5 mins walking data and up/downstairs walking data
   - make data fit int the Machine Leanring Model format
   - mark down each movement and trim each movement with same size
