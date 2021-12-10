@@ -12,7 +12,7 @@ Library installed: pandas, numpy, matplotlib, scipy, sklearn
 Data gathering and cleaning
 Machine Learning
 
-##Files
+## Files
 1. `src.ipynb`
   - include all the library, functions
   - Small demostration of the implements
