@@ -41,4 +41,10 @@ This project explores human activity prediction by using Data Science and Machin
   - make data fit int the Machine Leanring Model format
   - mark down each movement and trim each movement with same size
   - Run different Machine Learning Model, print out the score and report
-  - Use different Machine Learning Model to predict the activity 
+  - Use different Machine Learning Model to predict the activity
+6. `screen_onoff.ipynb`
+  - read screen on/off data
+  - plot two raw data to compare the difference
+  - Use Butterworth Filter and Fourier Transfrom
+  - Plot screen off raw data, screen on raw data, Butterwoth Filter screen off bw filtered data, Butterwoth Filter screen on bw filtered data
+  - Plot screen off raw data with Fourier Tansform, screen on raw data with Fourier Tansform, Butterwoth Filter screen off bw filtered data with Fourier Tansform, Butterwoth   Filter screen on bw filtered data with Fourier Tansform
