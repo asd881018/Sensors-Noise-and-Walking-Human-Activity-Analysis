@@ -6,7 +6,12 @@ This project explores human activity prediction by using Data Science and Machin
 
 ## Python version and libraries
 - We use python version 3.7.0
-- Library installed: pandas, numpy, matplotlib, scipy, sklearn
+- Library installed: 
+  - pandas
+  - numpy
+  - matplotlib
+  - scipy
+  - sklearn
 
 ## Main topic
 - Data gathering and cleaning
@@ -26,12 +31,12 @@ This project explores human activity prediction by using Data Science and Machin
   - trim the useless data
   - write out new CSV file to processed_data folder
  
-3. `bw_filter_data`
+3. `bw_filter_data.py`
   - read raw or trimmed data
   - use Butterworth filter to filter the noise the out
   - write out new CSV file with tag( _bw ) to processed_data folder
 
-4. `fft_data`
+4. `fft_data.py`
   - read raw or trimmed data or filtered data
   - use Fast Fourier Transform to transform the sigal to frequency
   - write out new CSV file with tag( _fft ) to processed_data folder
